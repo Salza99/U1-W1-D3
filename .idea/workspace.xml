@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b1fc023-b255-47e2-b3e5-c0352b13add6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/EsercizioRettangolo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/SimCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ExerciseThreeMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ExerciseTwoMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Ecommerce/Articolo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Ecommerce/Carrello.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Ecommerce/Cliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExerciseOneMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExerciseThreeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExerciseThreeMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
