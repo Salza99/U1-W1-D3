@@ -5,8 +5,11 @@ public class EsercizioRettangolo {
     private double larghezza;
 
     public EsercizioRettangolo(double altezza, double larghezza) {
-        this.altezza = altezza;
-        this.larghezza = larghezza;
+        if (altezza > 0 && larghezza > 0 ) {
+            this.altezza = altezza;
+            this.larghezza = larghezza;}
+        else {System.err.println("misure inaccettbili");}
+
     }
     public double calcoloPerimetro (double altezza, double larghezza) {
         return altezza * 2 + larghezza * 2;

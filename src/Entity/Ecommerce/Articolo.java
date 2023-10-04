@@ -3,7 +3,7 @@ package Entity.Ecommerce;
 public class Articolo {
     private int codiceArticolo;
     private String descrizioneArticolo;
-    private double prezzo;
+    private Double prezzo;
     private int storeItems;
 
     public Articolo( String descrizioneArticolo, double prezzo) {
@@ -11,6 +11,17 @@ public class Articolo {
         this.descrizioneArticolo = descrizioneArticolo;
         this.prezzo = prezzo;
         this.storeItems = 5;
+    }
+    public Articolo() {}
+
+    @Override
+    public String toString() {
+        return "Articolo{" +
+                "codiceArticolo=" + codiceArticolo +
+                ", descrizioneArticolo='" + descrizioneArticolo + '\'' +
+                ", prezzo=" + prezzo +
+                ", storeItems=" + storeItems +
+                '}';
     }
 
     public int getCodiceArticolo() {

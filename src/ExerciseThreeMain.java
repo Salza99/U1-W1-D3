@@ -1,7 +1,9 @@
 import Entity.Ecommerce.Articolo;
 import Entity.Ecommerce.Carrello;
 import Entity.Ecommerce.Cliente;
+import netscape.javascript.JSObject;
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
@@ -24,59 +26,140 @@ public class ExerciseThreeMain {
         Cliente a = new Cliente("Mario Rossi", "Mariorossi99@gmail.com", dataPrimaIscrizione);
         Cliente b = new Cliente("Luigi Verdi", "Luigiverdi@gmail.com", dataSecondaIscrizione);
 
-        // associo i carrelli dei due clienti
 
-        Carrello aC = new Carrello(a);
-        Carrello bC = new Carrello(b);
+
+
 
         //creo un applicativo in console
         runApplication(a, b, tShirt, hat, shoes, sweatshirt, trousers );
 
-        //controllo per chiusura applicazione
-        String close = ":q";
+
+
 
     }
     public static void runApplication (Cliente a, Cliente b, Articolo tShirt, Articolo hat, Articolo shoes, Articolo sweatshirt, Articolo trousers) {
+        //controllo per chiusura applicazione
+        Scanner input = new Scanner(System.in);
         while (true) {
-            Scanner input = new Scanner(System.in);
+
+
+            System.out.println("esci(0) acquista (1)");
+            String respExitOrBuy = input.nextLine();
+            if (respExitOrBuy.equals("1")){
             System.out.println("seleziona un utente (a, b)");
             String resp = input.nextLine();
             Cliente selezionato = resp.equals("a") ? a : b;
-            Carrello carrelloAssociato = new Carrello(selezionato);
+            Carrello carrelloAssociato;
+            if (selezionato.getCarrelloAssociato() == null) {
+
+                 carrelloAssociato = new Carrello(selezionato);
+                 selezionato.setCarrelloAssociato(carrelloAssociato);
+            }else {
+                 carrelloAssociato = selezionato.getCarrelloAssociato();
+            }
+
+            while (true){
+
             System.out.println("Benvenuto " + selezionato.getAnagraphic());
             System.out.println("selezioni un articolo da mettere nel carrello (tShirt, hat, shoes, sweatshirt, trousers");
             String articleSelected = input.nextLine();
+            Articolo[] store = new Articolo[]{};
             switch (articleSelected) {
-                case "tshirt":
-                    carrelloAssociato.setListaArticoli(0, tShirt);
-                    System.out.println(carrelloAssociato.getListaArticoli());
+
+                case "tShirt":
+                    store = new Articolo[carrelloAssociato.getListaArticoli().length + 1];
+                    for (int i = 0; i < store.length; i++) {
+                        if (i == store.length - 1) {
+                        store[i] = tShirt;
+                    } else {
+                            store[i] = carrelloAssociato.getListaArticoli()[i];
+                        }
+                    }
+                    carrelloAssociato.setListaArticoli(store);
+                    System.out.println("articoli in possesso: " + carrelloAssociato);
+                    System.out.println("numero articoli in carrello: " + carrelloAssociato.getListaArticoli().length);
+                    carrelloAssociato.setCostoTotale(tShirt.getPrezzo());
                     break;
-                case "hat":
-                    carrelloAssociato.setListaArticoli(1, hat);
-                    System.out.println(carrelloAssociato.getListaArticoli());
+                    case "hat":
+                        store = new Articolo[carrelloAssociato.getListaArticoli().length + 1];
+                    for (int i = 0; i < store.length; i++) {
+                        if (i == store.length - 1) {
+                        store[i] = hat;
+                    } else {
+                            store[i] = carrelloAssociato.getListaArticoli()[i];
+                        }
+                    }
+                    carrelloAssociato.setListaArticoli(store);
+                    System.out.println("articoli in possesso: " + carrelloAssociato);
+                    System.out.println("numero articoli in carrello: " + carrelloAssociato.getListaArticoli().length);
+                        carrelloAssociato.setCostoTotale(hat.getPrezzo());
                     break;
-                case "shoes":
-                    carrelloAssociato.setListaArticoli(2, shoes);
-                    System.out.println(carrelloAssociato.getListaArticoli());
+                    case "shoes":
+                    store = new Articolo[carrelloAssociato.getListaArticoli().length + 1];
+                    for (int i = 0; i < store.length; i++) {
+                        if (i == store.length - 1) {
+                        store[i] = shoes;
+                    } else {
+                            store[i] = carrelloAssociato.getListaArticoli()[i];
+                        }
+                    }
+                    carrelloAssociato.setListaArticoli(store);
+                    System.out.println("articoli in possesso: " + carrelloAssociato);
+                    System.out.println("numero articoli in carrello: " + carrelloAssociato.getListaArticoli().length);
+                        carrelloAssociato.setCostoTotale(shoes.getPrezzo());
                     break;
-                case "sweatshirt":
-                    carrelloAssociato.setListaArticoli(3, sweatshirt);
-                    System.out.println(carrelloAssociato.getListaArticoli());
+                    case "sweatshirt":
+                        store = new Articolo[carrelloAssociato.getListaArticoli().length + 1];
+                    for (int i = 0; i < store.length; i++) {
+                        if (i == store.length - 1) {
+                        store[i] = sweatshirt;
+                    } else {
+                            store[i] = carrelloAssociato.getListaArticoli()[i];
+                        }
+                    }
+                    carrelloAssociato.setListaArticoli(store);
+                    System.out.println("articoli in possesso: " + carrelloAssociato);
+                    System.out.println("numero articoli in carrello: " + carrelloAssociato.getListaArticoli().length);
+                        carrelloAssociato.setCostoTotale(sweatshirt.getPrezzo());
                     break;
-                case "trousers":
-                    carrelloAssociato.setListaArticoli(4, trousers);
-                    System.out.println(carrelloAssociato.getListaArticoli());
+                    case "trousers":
+                        store = new Articolo[carrelloAssociato.getListaArticoli().length + 1];
+                    for (int i = 0; i < store.length; i++) {
+                        if (i == store.length - 1) {
+                        store[i] = trousers;
+                    } else {
+                            store[i] = carrelloAssociato.getListaArticoli()[i];
+                        }
+                    }
+                    carrelloAssociato.setListaArticoli(store);
+                    System.out.println("articoli in possesso: " + carrelloAssociato);
+                    System.out.println("numero articoli in carrello: " + carrelloAssociato.getListaArticoli().length);
+                        carrelloAssociato.setCostoTotale(trousers.getPrezzo());
                     break;
+
                 default:
                     System.out.println("Articolo non valido.");
                     break;
+
             }
             System.out.println("Si desiderano fare altri acquisti? (s, n)");
             String respSecond = input.nextLine();
-            if (respSecond.equals("s")) {
-                System.out.println("selezioni un articolo da mettere nel carrello (tShirt, hat, shoes, sweatshirt, trousers");
+            if (respSecond.equals("n")) {
+                System.out.println("totale carrello: " + carrelloAssociato.getCostoTotale().floatValue() + " €");
+                System.out.println("Salda carrello (1) abortire programma(2)");
+                String respAbort = input.nextLine();
+                if (respAbort.equals("1")) {
+                    carrelloAssociato.setCostoTotale("ciao");
+                }else {
+                    break;
+                }
 
-            }
+
+
+
+            }}}
+            else {input.close();
+                break;}
         }
     }
 

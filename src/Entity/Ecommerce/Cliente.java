@@ -7,6 +7,7 @@ public class Cliente {
     private String anagraphic;
     private String email;
     private Date dataIscrizione;
+    private Carrello carrelloAssociato;
 
     public Cliente(String anagraphic, String email, Date dataIscrizione) {
         this.codiceCliente = (int) (0 + Math.floor(Math.random() * 100));
@@ -14,6 +15,7 @@ public class Cliente {
         this.email = email;
         this.dataIscrizione = dataIscrizione;
     }
+    public Cliente () {}
 
     public int getCodiceCliente() {
         return codiceCliente;
@@ -29,5 +31,13 @@ public class Cliente {
 
     public Date getDataIscrizione() {
         return dataIscrizione;
+    }
+
+    public Carrello getCarrelloAssociato() {
+        return carrelloAssociato;
+    }
+
+    public void setCarrelloAssociato(Carrello carrelloAssociato) {
+        this.carrelloAssociato = carrelloAssociato;
     }
 }
