@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b1fc023-b255-47e2-b3e5-c0352b13add6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Ecommerce/Articolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ecommerce/Articolo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Ecommerce/Carrello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ecommerce/Carrello.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Ecommerce/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ecommerce/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/EsercizioRettangolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/EsercizioRettangolo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ExerciseThreeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExerciseThreeMain.java" afterDir="false" />
-    </list>
+    <list default="true" id="1b1fc023-b255-47e2-b3e5-c0352b13add6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
